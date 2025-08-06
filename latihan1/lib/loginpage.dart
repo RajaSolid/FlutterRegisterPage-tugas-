@@ -1,4 +1,5 @@
 import "package:flutter/material.dart";
+import "package:latihan1/widgets/custombutton.dart";
 
 class Loginpage extends StatefulWidget {
   const Loginpage({super.key});
@@ -68,7 +69,7 @@ class _Loginpage extends State<Loginpage> {
             Container(
               width: double.infinity,
               margin: EdgeInsets.only(top: 10, bottom: 10),
-              child: ElevatedButton(
+              child: Buttoncustom(mytext: "Login",mytextcolor: Colors.blue,
                 onPressed: () {
                   if (txtuser.text == "Admin" && txtpass.text == "123") {
                     setState(() {
@@ -81,20 +82,23 @@ class _Loginpage extends State<Loginpage> {
                   }
                   print("Status : " + status);
                 },
-                child: Text("Login"),
               ),
             ),
+            // Container(
+            //   width: double.infinity,
+            //   child: TextButton(
+            //     onPressed: () {
+            //       Navigator.pushNamed(context, '/register');
+            //     },
+            //     child: const Text("Belum punya akun? Daftar di sini"),
+            //   ),
+            // ),
+
             Container(
               width: double.infinity,
-              child: TextButton(
-                onPressed: () {
-                  Navigator.pushNamed(context, '/register');
-                },
-                child: const Text("Belum punya akun? Daftar di sini"),
-              ),
-            ),
-
-            Text(status),
+              child: Buttoncustom(mytext: 'register', 
+              mytextcolor: Colors.deepPurple, 
+              onPressed: () { Navigator.pushNamed(context, '/register'); },))
           ],
         ),
       ),
