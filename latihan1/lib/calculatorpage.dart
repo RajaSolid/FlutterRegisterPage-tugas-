@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan1/Controllers/calcontroller.dart';
 import 'package:latihan1/custominputcal.dart';
+import 'package:latihan1/routes/routes.dart';
 import 'package:latihan1/widgets/custombutton.dart';
 
 class Calpage extends StatelessWidget {
@@ -22,7 +23,6 @@ class Calpage extends StatelessWidget {
               controller: calcontroller.txtangka1,
               label: "Input angka 1",
             ),
-            SizedBox(height: 10),
             Customtextfield(
               controller: calcontroller.txtangka2,
               label: "Input angka 2",
@@ -84,9 +84,11 @@ class Calpage extends StatelessWidget {
             SizedBox(height: 20),
 
             Buttoncustom(
-              mytext: "Clear",
+              mytext: "Main Menu",
               mytextcolor: Colors.purpleAccent,
-              onPressed: () => calcontroller.clear(),
+              onPressed: () {
+                Get.toNamed(AppRoutes.footballpage);
+              },
             ),
           ],
         ),

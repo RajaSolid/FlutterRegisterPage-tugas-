@@ -3,6 +3,8 @@ import 'package:get/get_navigation/get_navigation.dart';
 import 'package:latihan1/calculatorpage.dart';
 import 'package:latihan1/loginpage.dart';
 import 'package:latihan1/registerpage.dart';
+import 'package:latihan1/routes/pages.dart';
+import 'package:latihan1/routes/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,7 +21,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       ),
-      home: Calpage(),
+      initialRoute: 
+      AppRoutes.calculatorpage,
+      getPages: AppPages.pages,
       // home: const Loginpage(),
       // routes: {
       //   '/register': (context) => const Registerpage(),

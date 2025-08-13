@@ -15,7 +15,7 @@ class Custominput extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(vertical: 8),
+      padding: const EdgeInsets.symmetric(vertical: 10),
       child: TextField(
         controller: controller,
         obscureText: password,
