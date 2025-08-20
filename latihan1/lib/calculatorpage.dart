@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:latihan1/Controllers/calcontroller.dart';
 import 'package:latihan1/custominputcal.dart';
-import 'package:latihan1/routes/routes.dart';
 import 'package:latihan1/widgets/custombutton.dart';
 
 class Calpage extends StatelessWidget {
@@ -84,10 +83,10 @@ class Calpage extends StatelessWidget {
             SizedBox(height: 20),
 
             Buttoncustom(
-              mytext: "Main Menu",
+              mytext: "Clear",
               mytextcolor: Colors.purpleAccent,
               onPressed: () {
-                Get.toNamed(AppRoutes.footballpage);
+                calcontroller.clear();
               },
             ),
           ],
